@@ -8,11 +8,11 @@ The **Pump.fun Smart Contract forking** is an innovative platform  designed to a
 - **Market Creation**: Set up markets for trading tokens with ease.
 - **Pool Management**: Add and remove liquidity in Raydium pools. Burn SPL tokens efficiently.
 - **Dashboard**: Display detail information of token listed on pump.fun.
-- **Fee**: Handling gather fee from user who use our smart contract.
-- **Migration to Meteora**: Migration to Meteora using CPI call.
-- **Whiltelist**: Add user to whitelist to add more permission to each user.
-- **Spam Detection**: Automatically catch and handle spammers making transactions to the OpenBook market.
 - **Discord Integration**: Receive real-time notifications on Discord via webhooks.
+- **Fee**: Handling gather fee from user who use our smart contract.
+- 🚀 **Migration to Meteora/Raydium** 🚀: Migration to Meteora/Raydium using CPI call.
+- 🚀 **Whiltelist** 🚀: Add user to whitelist to add more permission to each user.
+- 🚀 **Spam Detection** 🚀: Automatically catch and handle spammers making transactions to the OpenBook market.
 
 ## 📋 Demo
 
