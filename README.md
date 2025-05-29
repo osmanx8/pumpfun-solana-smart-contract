@@ -32,3 +32,133 @@ The **Pump.fun Smart Contract forking** is an innovative platform  designed to a
 ## 🍵 Tip
 
 ### If you are intereseted in my projects, please 🔗fork or give me ⭐star
+
+
+# 🎯 Project Setup Guide
+
+Welcome to the project! This guide will help you quickly get started by installing the required tools and configuring your local environment.
+
+---
+
+## 🛠️ Prerequisites
+
+Ensure the following tools are installed on your system:
+
+- [Rust](https://www.rust-lang.org/tools/install)
+- [Solana CLI](https://docs.solana.com/cli/install-solana-cli-tools)
+- [Anchor](https://anchor-lang.com/docs/installation)
+
+> ℹ️ **Recommended Anchor version:** `0.30.1`
+
+---
+
+## ✅ Check Versions & Set Config
+
+Verify that everything is properly installed and configured:
+
+```bash
+rustc --version             # Check Rust version
+solana --version            # Check Solana CLI version
+anchor --version            # Check Anchor version
+
+solana config get           # View current Solana config
+solana config set --url devnet  # Set network to devnet
+```
+
+---
+
+
+## 🔐 Wallet Setup
+
+Generate and manage your wallet keys:
+
+```bash
+solana-keygen new -o ./keys/admin.json     # Generate a new keypair
+solana-keygen pubkey ./keys/admin.json     # Get public key
+solana balance ./keys/admin.json           # Check wallet balance
+solana airdrop 5 YOUR_WALLET_ADDRESS -u devnet   # Airdrop 5 SOL to your wallet
+```
+
+---
+
+## 📦 Project Installation
+
+Clone the project and install dependencies:
+
+```bash
+git clone https://github.com/project-repo.git
+cd project-folder
+yarn
+```
+
+---
+
+
+## ⚡ Quick Start
+
+### 🏗️ Build the Program
+
+Compile the Anchor smart contract:
+
+```bash
+# Build the Anchor program using nightly toolchain
+RUSTUP_TOOLCHAIN="nightly-2024-11-19" anchor build
+
+# Sync all program public keys
+anchor keys sync
+
+# Rebuild if the program address in lib.rs has changed
+RUSTUP_TOOLCHAIN="nightly-2024-11-19" anchor build
+```
+
+---
+
+### 🧪 Test on Devnet
+
+Ensure your `Anchor.toml` uses Devnet:
+
+```toml
+[provider]
+cluster = "https://api.devnet.solana.com"
+```
+
+---
+
+### 🚀 Deploy the Program
+
+```bash
+anchor deploy
+```
+
+---
+
+## 🧪 Use CLI to Interact with the Program
+
+Use these CLI scripts to interact with your smart contract locally.
+
+### Initialize Program
+
+```bash
+yarn script config
+```
+
+### launch a token
+```bash
+yarn script curve
+```
+
+### Swap SOL for Token
+```bash
+yarn script swap -t <TOKEN_MINT> -a <SWAP_AMOUNT> -s <SWAP_DIRECTION>
+
+<TOKEN_MINT>: You can get the token mint address when you launch a token.
+
+<SWAP_AMOUNT>: The amount of SOL or Token you want to swap.
+
+<SWAP_DIRECTION>: 0: Buy token (Swap SOL → Token)   1: Sell token (Swap Token → SOL)
+```
+
+### Migrate Token to Raydium
+```bash
+yarn script migrate -m <TOKEN_MINT>
+```
