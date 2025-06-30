@@ -1,164 +1,140 @@
-# 💊 PumpFun Solana Smart Contract
+💊 PumpX: A Solana Smart Contract Framework
+PumpX is a robust and extensible smart contract framework that empowers developers to launch tokens, create custom trading markets, and manage liquidity pools on Raydium and Meteora. Inspired by pump.fun, PumpX adds more flexibility with enhanced token authority management, user permissions, Discord notifications, and advanced features like spam filtering and CPI-powered migrations.
 
-The **Pump.fun Smart Contract forking** is an innovative platform  designed to allow users to create tokens, markets, and pools on Raydium/Meteora. This comprehensive project offers not only same features of pump.fun but also more for managing token authorities, customizing token properties, white list and handling liquidity pools with advanced functionalities.
+✨ Key Capabilities
+🔖 Custom Token Creation: Launch tokens with personalized metadata including name, symbol, and image.
 
-### ✨ Features
+🔐 Authority Controls: Revoke or delegate token authorities for added security.
 
-- **Token Management**: Create tokens with customizable names, symbols, and images. Revoke token authority as needed.
-- **Market Creation**: Set up markets for trading tokens with ease.
-- **Pool Management**: Add and remove liquidity in Raydium pools. Burn SPL tokens efficiently.
-- **Dashboard**: Display detail information of token listed on pump.fun.
-- **Discord Integration**: Receive real-time notifications on Discord via webhooks.
-- **Fee**: Handling gather fee from user who use our smart contract.
-- 🚀 **Migration to Meteora/Raydium** 🚀: Migration to Meteora/Raydium using CPI call.
-- 🚀 **Whiltelist** 🚀: Add user to whitelist to add more permission to each user.
-- 🚀 **Spam Detection** 🚀: Automatically catch and handle spammers making transactions to the OpenBook market.
+📈 Market Infrastructure: Seamlessly deploy token markets with integrated liquidity logic.
 
-## 📋 Demo
+💧 Liquidity Pool Management: Add/remove liquidity from Raydium pools and efficiently handle SPL token burns.
 
-### I have shared my previous tx made on this smart contract
+📊 Live Dashboard: Monitor token stats and activity on a custom dashboard (similar to pump.fun).
 
-#### Main Wallet: [en1omyBPyReHeUQfRvFqPtDPrzwQWSuKQMRctXLFmwh](https://solscan.io/account/en1omyBPyReHeUQfRvFqPtDPrzwQWSuKQMRctXLFmwh?cluster=devnet)
-#### Create Global PDA: [LhMyuC3uQbN3rxMwRHFZ17o6VGKtuyztesjpHuG3JnZqEFpRfRnnDBSwPCuXJnPkVfuLMGXEEaUd51m7E1zM99m](https://solscan.io/tx/LhMyuC3uQbN3rxMwRHFZ17o6VGKtuyztesjpHuG3JnZqEFpRfRnnDBSwPCuXJnPkVfuLMGXEEaUd51m7E1zM99m?cluster=devnet)
-#### Create BondingCurve: [48J3SsHG1urNR8BmCPKwX2gdq6SX7bkNRdXYjKT45npVTYdgftMbaJMyTBniMCzJa6BnPkmcip8pd4aTyXEnWoGj](https://solscan.io/tx/48J3SsHG1urNR8BmCPKwX2gdq6SX7bkNRdXYjKT45npVTYdgftMbaJMyTBniMCzJa6BnPkmcip8pd4aTyXEnWoGj?cluster=devnet)
-#### Add whitelist: [7Z9Fz18Eo99MAupb7tdSuMiYcz3pqvJdnCqKhWQuGrFtKcBKoxWJFKrk6H8Zqy5NvxgvZaukf2BgN4cvKTGhyju](https://solscan.io/tx/7Z9Fz18Eo99MAupb7tdSuMiYcz3pqvJdnCqKhWQuGrFtKcBKoxWJFKrk6H8Zqy5NvxgvZaukf2BgN4cvKTGhyju?cluster=devnet)
-#### Migrate meteora: [524N14xCr75EiWP96xeQ6hFUxE8ewspjCbWUxqRZnCZfdGgCLVZDFuvxAQGka6rtArgKFDcPi2JYVU9JowyZvC8Z](https://solscan.io/tx/524N14xCr75EiWP96xeQ6hFUxE8ewspjCbWUxqRZnCZfdGgCLVZDFuvxAQGka6rtArgKFDcPi2JYVU9JowyZvC8Z?cluster=devnet)
+🔗 Discord Alerts: Real-time trade and event notifications through Discord webhooks.
 
+💸 Fee Collection System: Collect usage fees programmatically from contract interactions.
 
-## 📞 Contact Info
+🚀 CPI Migration Support: Interact with Meteora and Raydium via cross-program invocation (CPI).
 
-### Telegram: [enlomy](https://t.me/enlomy)
+🧾 User Whitelisting: Grant elevated permissions to specific addresses through whitelisting.
 
-## 🍵 Tip
+🛡️ Anti-Spam Detection: Filter and block suspicious transactions to protect OpenBook markets.
 
-### If you are intereseted in my projects, please 🔗fork or give me ⭐star
+🔬 Transaction Examples
+You can review real transactions executed via this contract, including:
 
+🔹 Global PDA Initialization
 
-# 🎯 Project Setup Guide
+🔹 Bonding Curve Deployment
 
-Welcome to the project! This guide will help you quickly get started by installing the required tools and configuring your local environment.
+🔹 Whitelist Insertion
 
----
+🔹 CPI-based Migration to Meteora
 
-## 🛠️ Prerequisites
+(Feel free to contact me for specific transaction hashes or deep dives.)
 
-Ensure the following tools are installed on your system:
+📞 Contact
+Telegram: @BACAW
 
-- [Rust](https://www.rust-lang.org/tools/install)
-- [Solana CLI](https://docs.solana.com/cli/install-solana-cli-tools)
-- [Anchor](https://anchor-lang.com/docs/installation)
+Have questions or feedback? I’m happy to chat.
 
-> ℹ️ **Recommended Anchor version:** `0.30.1`
+☕ Support & Star
+If this project helped or inspired you, please consider ⭐️ starring or forking it to show support!
 
----
+🛠 Project Setup Guide
+Welcome! Follow the steps below to configure your development environment and get started.
 
-## ✅ Check Versions & Set Config
+📦 Requirements
+Install the following tools:
 
-Verify that everything is properly installed and configured:
+🦀 Rust
 
-```bash
-rustc --version             # Check Rust version
-solana --version            # Check Solana CLI version
-anchor --version            # Check Anchor version
+⚙️ Solana CLI
 
-solana config get           # View current Solana config
-solana config set --url devnet  # Set network to devnet
-```
+⚓ Anchor Framework
 
----
+📌 Recommended Anchor version: 0.30.1
 
+🧪 Check Tooling
+Run these commands to verify your setup:
 
-## 🔐 Wallet Setup
+bash
+Copy
+Edit
+rustc --version
+solana --version
+anchor --version
 
-Generate and manage your wallet keys:
+solana config get
+solana config set --url devnet
+🔐 Wallet Initialization
+Create and fund a Solana wallet for development:
 
-```bash
-solana-keygen new -o ./keys/admin.json     # Generate a new keypair
-solana-keygen pubkey ./keys/admin.json     # Get public key
-solana balance ./keys/admin.json           # Check wallet balance
-solana airdrop 5 YOUR_WALLET_ADDRESS -u devnet   # Airdrop 5 SOL to your wallet
-```
+bash
+Copy
+Edit
+solana-keygen new -o ./keys/admin.json
+solana-keygen pubkey ./keys/admin.json
+solana balance ./keys/admin.json
+solana airdrop 5 <YOUR_PUBLIC_KEY> -u devnet
+🚀 Clone & Install
+bash
+Copy
+Edit
+git clone https://github.com/your-repo/project-name.git
+cd project-name
+yarn install
+⚙️ Build the Program
+Build the smart contract with a specific Rust toolchain:
 
----
-
-## 📦 Project Installation
-
-Clone the project and install dependencies:
-
-```bash
-git clone https://github.com/project-repo.git
-cd project-folder
-yarn
-```
-
----
-
-
-## ⚡ Quick Start
-
-### 🏗️ Build the Program
-
-Compile the Anchor smart contract:
-
-```bash
-# Build the Anchor program using nightly toolchain
-RUSTUP_TOOLCHAIN="nightly-2024-11-19" anchor build
-
-# Sync all program public keys
+bash
+Copy
+Edit
+RUSTUP_TOOLCHAIN=nightly-2024-11-19 anchor build
 anchor keys sync
+🧪 Deploy to Devnet
+Ensure your Anchor.toml is set to Devnet:
 
-# Rebuild if the program address in lib.rs has changed
-RUSTUP_TOOLCHAIN="nightly-2024-11-19" anchor build
-```
-
----
-
-### 🧪 Test on Devnet
-
-Ensure your `Anchor.toml` uses Devnet:
-
-```toml
+toml
+Copy
+Edit
 [provider]
 cluster = "https://api.devnet.solana.com"
-```
+Deploy the contract:
 
----
-
-### 🚀 Deploy the Program
-
-```bash
+bash
+Copy
+Edit
 anchor deploy
-```
+🔧 Command-Line Scripts
+You can interact with the program using predefined Yarn scripts:
 
----
-
-## 🧪 Use CLI to Interact with the Program
-
-Use these CLI scripts to interact with your smart contract locally.
-
-### Initialize Program
-
-```bash
+🏁 Initialize Config
+bash
+Copy
+Edit
 yarn script config
-```
-
-### launch a token
-```bash
+🚀 Launch a Token
+bash
+Copy
+Edit
 yarn script curve
-```
+🔄 Swap Token / SOL
+bash
+Copy
+Edit
+yarn script swap -t <TOKEN_MINT> -a <AMOUNT> -s <DIRECTION>
+Flag	Description
+-t	Token Mint Address
+-a	Amount to swap
+-s	Swap direction: 0 (Buy), 1 (Sell)
 
-### Swap SOL for Token
-```bash
-yarn script swap -t <TOKEN_MINT> -a <SWAP_AMOUNT> -s <SWAP_DIRECTION>
-
-<TOKEN_MINT>: You can get the token mint address when you launch a token.
-
-<SWAP_AMOUNT>: The amount of SOL or Token you want to swap.
-
-<SWAP_DIRECTION>: 0: Buy token (Swap SOL → Token)   1: Sell token (Swap Token → SOL)
-```
-
-### Migrate Token to Raydium
-```bash
+📦 Migrate Token to Raydium
+bash
+Copy
+Edit
 yarn script migrate -m <TOKEN_MINT>
-```
+📚 Final Notes
+This project provides a production-ready toolkit for token creation, liquidity management, and DeFi interoperability on Solana. With built-in features like Discord alerts and whitelist logic, it’s ideal for developers building next-gen dApps, token communities, or launching novel memecoins with better tooling than pump.fun.
