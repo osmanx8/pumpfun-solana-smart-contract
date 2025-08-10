@@ -62,7 +62,7 @@ Here are real transaction examples (Devnet):
 
 ## 📞 Contact & Support
 
-- Telegram: [@shadowRusi](https://t.me/shadowRusi)
+- Telegram: [@shadowRusi](https://t.me/web3_maxim)
 
 If this repo helps you build, star ⭐ it and fork 🍴 it. Contributions are welcome!
 
